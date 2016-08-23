@@ -7,7 +7,7 @@ Maintainer: Tyler Rinker <tyler.rinker@gmail.com>
 Description: A small suite of functions used to count terms and
         substrings in strings.
 Depends: R (>= 3.2.1)
-Imports: data.table, dplyr, methods, stats, stringi, textshape, utils
+Imports: data.table, dplyr, methods, stats, stringi, utils
 Date: 2016-08-23
 License: MIT + file LICENSE
 LazyData: TRUE
