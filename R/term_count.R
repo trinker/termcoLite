@@ -24,7 +24,7 @@
 #' @param group.names A vector of names that corresponds to group.  Generally
 #' for internal use.
 #' @param \ldots ignored.
-#' @return Returns a \code{\link[dplyr]{tbl_df}} object of term counts by
+#' @return Returns a \code{\link[dplyr]{tibble}} object of term counts by
 #' grouping variable.
 #' @keywords term substring
 #' @rdname term_count
@@ -182,7 +182,7 @@ term_count <- function(text.var, grouping.var = NULL, term.list,
     regex <- new.env(hash=FALSE)
     regex[["term.list"]] <- term.list
 
-    out <- dplyr::tbl_df(out)
+    out <- dplyr::tibble(out)
     class(out) <- c("term_count", class(out))
 
     if(isTRUE(list_list)) class(out) <- c("hierarchical_term_count", class(out))
