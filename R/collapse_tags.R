@@ -50,7 +50,7 @@ collapse_tags <- function(x, mapping, ...){
         y[["term.vars"]] <- c(excluder(y[["term.vars"]], removes), names(mapping))
     }
 
-    x <- dplyr::tbl_df(x)
+    x <- dplyr::tibble(x)
     class(x) <- y[['class']]
     y <- y[c("group.vars", "term.vars", "weight", "pretty", "counts", "text.var", "model", "regex")]
     for (i in seq_along(y)){
